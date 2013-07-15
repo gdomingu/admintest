@@ -1,0 +1,27 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: admintest_development
+  pool: 5
+  username: Gabriel
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: admintest_test
+  pool: 5
+  username: Gabriel
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: admintest_production
+  pool: 5
+  username: Gabriel
+  password:
