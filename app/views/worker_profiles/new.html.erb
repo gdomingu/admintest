@@ -1,0 +1,40 @@
+<h1>Sign Up</h1>
+
+<%= form_for @worker_profile do |f| %>
+  <% if @worker_profile.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% @worker_profile.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= label_tag :email %><br />
+    <%= text_field_tag "user[email]", params[:user] %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %><br />
+    <%= password_field_tag "user[password]", params[:password] %>
+  </div>
+  <div class="field">
+    <%= label_tag :password_confirmation %><br />
+    <%= password_field_tag "user[password_confirmation]", params[:password_confirmation] %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :esl_level %><br />
+    <%= f.text_field :esl_level %>
+  </div>
+  <div class="actions"><%= f.submit "Sign up" %></div>
+<% end %>

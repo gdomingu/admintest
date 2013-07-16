@@ -1,5 +1,9 @@
 Admintest::Application.routes.draw do
+  resources :worker_profiles
 
+
+  resources :worker_profiles
+  resources :employer_profiles
 
   resources :pages
 
